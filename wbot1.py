@@ -139,9 +139,10 @@ ph2 = "https://x0.at/abS_.mp4"
 menu = "https://x0.at/7awl.mp4"
 uptime = "https://x0.at/bF65.mp4"
 mediaid = "https://x0.at/nzYA.mp4"
-shapka = ""
-shapka1 = ""
-shapka2 = ""
+custom = "https://x0.at/hxAt.mp4"
+shapka = "興 ᴨᴏчуʙᴀюᴄя ᴋᴩᴀщᴇ ᴄᴇᴩᴇд ᴨᴏʍᴇᴩᴧих ᴋᴏᴩᴏᴧіʙ ♯"
+shapka1 = "興 ᴨᴏчуʙᴀюᴄя ᴋᴩᴀщᴇ ᴄᴇᴩᴇд ᴨᴏʍᴇᴩᴧих ᴋᴏᴩᴏᴧіʙ ♯"
+shapka2 = "興 ᴨᴏчуʙᴀюᴄя ᴋᴩᴀщᴇ ᴄᴇᴩᴇд ᴨᴏʍᴇᴩᴧих ᴋᴏᴩᴏᴧіʙ ♯"
 name = "ᎳᎪᏒᏒᎬN ᎳᎪᏒᏒᏆᏫᏒ ᏴᏫᎢ"
 media_file = ""
 admin_id = "6204900599"
@@ -204,7 +205,7 @@ class PydroidBot:
                 text = event.message.message.split(maxsplit=1)[1]
                 global shapka
                 shapka = str(text)
-                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!<b>', parse_mode='html')
+                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!</b>', parse_mode='html')
 
 
         @self.client.on(events.NewMessage(pattern='/stop'))
@@ -240,7 +241,7 @@ class PydroidBot:
                 ph = 'https://x0.at/ENii.mp4'
                 chat_id = event.chat_id
                 me = await self.client.get_me()
-                await self.client.send_file(chat_id, ph, caption='вітаю з покупкою бота!\n<b>⛧ᎳᎪᏒᏒᎬN ᎳᎪᏒᏒᏆᏫᏒ ᏴᏫᎢ⛧</b>\nкоманди для користування ботом:\n\n𓆩ꏢ𓆪 <code>/menu</code> - дізнатись всі команди бота\n⛧ <code>/id</code> - дізнатись айді чату\n⛧ <code>/uptime</code> - дізнатись час роботи бота\n⛧ <code>/start</code> - викликати це меню\n⛧ <code>/custom</code> - дізнатись команди для зміни бота\n\n\n♱ розробник бота: <b>@NalledWarren</b>'.format(), parse_mode='html')
+                await self.client.send_file(chat_id, ph, caption='вітаю з покупкою бота!\n<b>⛧'+name+'⛧</b>\nкоманди для користування ботом:\n\n⛧ <code>/menu</code> - дізнатись всі команди бота\n⛧ <code>/id</code> - дізнатись айді чату\n⛧ <code>/uptime</code> - дізнатись час роботи бота\n⛧ <code>/start</code> - викликати це меню\n⛧ <code>/custom</code> - дізнатись команди для зміни бота\n\n\n♱ розробник бота: <b>@NalledWarren</b>'.format(), parse_mode='html')
 
         @self.client.on(events.NewMessage(pattern=r'\/nterror'))
         async def command_fast(event):
@@ -294,7 +295,7 @@ class PydroidBot:
                 text = event.message.message.split(maxsplit=1)[1]
                 global shapka1
                 shapka1 = str(text)
-                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!<b>', parse_mode='html')
+                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!</b>', parse_mode='html')
 
         @self.client.on(events.NewMessage(pattern='/nstop'))
 
@@ -362,7 +363,7 @@ class PydroidBot:
                 text = event.message.message.split(maxsplit=1)[1]
                 global shapka2
                 shapka2 = str(text)
-                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!<b>', parse_mode='html')
+                await event.respond('<b>ɯᥲᥰκᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!</b>', parse_mode='html')
 
         @self.client.on(events.NewMessage(pattern='/qstop'))
         async def command_stop(event):
@@ -393,7 +394,7 @@ class PydroidBot:
                 text = event.message.message.split(maxsplit=1)[1]
                 global name
                 name = str(text)
-                await event.respond('<b>нᥲᤋʙᥲ δ᧐ᴛᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!<b>', parse_mode='html')
+                await event.respond('<b>нᥲᤋʙᥲ δ᧐ᴛᥲ ʙᥴᴛᥲн᧐ʙ᧘ᥱнᥲ!</b>', parse_mode='html')
 
         @self.client.on(events.NewMessage(pattern='/muptime'))
         async def command_set_file(event):
@@ -421,11 +422,18 @@ class PydroidBot:
 
         @self.client.on(events.NewMessage(pattern='/custom'))
         async def command_help_commands(event):
-                ph = "https://x0.at/hxAt.mp4"
+            if str(event.message.sender_id) == admin_id:
                 chat_id = event.chat_id
                 me = await self.client.get_me()
-                await self.client.send_file(chat_id, ph, caption='<b>custom in ᎳᎪᏒᏒᎬN ᎳᎪᏒᏒᏆᏫᏒ ᏴᏫᎢ</b>\n\n興 <code>/name</code> + text — change name [ /menu ]\n興 <code>/mmenu</code> + link —  change media [ /menu ]\n興 <code>/mid</code> + link — change media [ /id ]\n興 <code>/muptime</code> + link — change media [ /uptime ]'.format(), parse_mode='html')
+                await self.client.send_file(chat_id, custom, caption='<b>custom in '+name+'</b>\n\n興 <code>/name</code> + text — change name [ /menu ]\n興 <code>/mmenu</code> + link —  change media [ /menu ]\n興 <code>/mid</code> + link — change media [ /id ]\n興 <code>/muptime</code> + link — change media [ /uptime ]\n興 <code>/mcustom</code> + link — change media [ /custom ]'.format(), parse_mode='html')
 
+        @self.client.on(events.NewMessage(pattern='/mcustom'))
+        async def command_set_file(event):
+            if str(event.message.sender_id) == admin_id:
+                text = event.message.message.split(maxsplit=1)[1]
+                global custom
+                custom = text
+                await event.respond("<b>ⲙᥱдіᥲ д᧘я κᥲᥴᴛ᧐ⲙκᥙ ʙᥴᴛᥲн᧐ʙ᧘ᥱн᧐!</b>", parse_mode='html')
 
     def start(self):
         self.client.run_until_disconnected()
